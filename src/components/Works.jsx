@@ -17,7 +17,11 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div id="Work" variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      id="Work"
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="mx-auto"
+    >
       <Tilt
         options={{
           max: 45,
@@ -47,7 +51,7 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 md:h-[140px] h-[120px]">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>

@@ -45,16 +45,16 @@ export const navLinks = [
 
 const services = [
   {
+    title: "Front End Developer",
+    icon: backend,
+  },
+  {
     title: "Web Developer",
     icon: web,
   },
   {
     title: "React Native Developer",
     icon: mobile,
-  },
-  {
-    title: "Front End Developer",
-    icon: backend,
   },
 ];
 
@@ -190,7 +190,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "bootstrap and React-Bootstrap",
+        name: "React-Bootstrap",
         color: "pink-text-gradient",
       },
     ],

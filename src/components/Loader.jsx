@@ -5,9 +5,9 @@ const Loader = () => {
     <Html>
       <span className="canvas-load"></span>
       <p
+        className="text-green-400"
         style={{
-          fontSize: 14,
-          color: "#f1f1f1",
+          fontSize: 20,
           fontWeight: 800,
           marginTop: 40,
         }}
