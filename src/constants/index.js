@@ -26,6 +26,10 @@ import {
   shoeApp,
   jobRecSystem,
   reminder,
+  bootstrap,
+  react_bootstrap,
+  MYSQL,
+  appwrite,
 } from "../assets";
 
 export const navLinks = [
@@ -79,6 +83,10 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
+  { name: "Bootstrap", icon: bootstrap },
+  { name: "React-Bootstrap", icon: react_bootstrap },
+  { name: "MYSQL", icon: MYSQL },
+  { name: "Appwrite", icon: appwrite },
   {
     name: "Node JS",
     icon: nodejs,
@@ -86,10 +94,6 @@ const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "git",
-    icon: git,
   },
 ];
 

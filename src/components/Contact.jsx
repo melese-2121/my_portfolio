@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+import { EarthCanvas, StarsCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -76,7 +76,7 @@ const Contact = () => {
       >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-1 bg-black-100 p-8 rounded-2xl w-[75%] mx-auto "
+          className="flex-1 bg-black-200 p-8 rounded-2xl w-[75%] mx-auto "
         >
           <h3 className="text-green-400 text-3xl font-bold"> Contact Me.</h3>
           <p className="text-zinc-500 mt-1 mx-1 hover:text-white">
@@ -97,7 +97,7 @@ const Contact = () => {
                 onChange={handleChange}
                 ref={inputRef}
                 placeholder=""
-                className="bg-tertiary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                className="bg-black-100 py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -110,7 +110,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder=""
-                className="bg-tertiary py-2 px-6 placeholder:text-secondary text-zinc-200 rounded-lg outline-none border-none font-medium"
+                className="bg-black-100 py-2 px-6 placeholder:text-secondary text-zinc-200 rounded-lg outline-none border-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -123,7 +123,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder=""
-                className="text-sm bg-tertiary py-2 px-6 placeholder:text-secondary text-zinc-200 rounded-lg outline-none border-none font-sm"
+                className="text-sm bg-black-100 py-2 px-6 placeholder:text-secondary text-zinc-200 rounded-lg outline-none border-none font-sm"
               />
             </label>
 
@@ -136,6 +136,7 @@ const Contact = () => {
               </button>
             </div>
           </form>
+          <StarsCanvas />
         </motion.div>
 
         <motion.div

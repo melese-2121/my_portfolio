@@ -20,6 +20,10 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import bootstrap from "./tech/bootstrap.jpeg";
+import react_bootstrap from "./tech/react_bootstrap.png";
+import MYSQL from "./tech/MYSQL.jpeg";
+import appwrite from "./tech/appwrite.jpeg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -31,7 +35,9 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import reminder from "./reminder.png";
 import shoeApp from "./shoeApp.png";
-import jobRecSystem from "./jobRecSystem.png"
+import jobRecSystem from "./jobRecSystem.png";
+
+import herobg from "./herobg.jpg";
 
 export {
   logo,
@@ -64,5 +70,10 @@ export {
   tripguide,
   reminder,
   jobRecSystem,
-  shoeApp
+  shoeApp,
+  bootstrap,
+  react_bootstrap,
+  MYSQL,
+  appwrite,
+  herobg,
 };
