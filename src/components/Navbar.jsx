@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets";
 import { StarsCanvas } from "./canvas";
 
 const Navbar = () => {
@@ -43,20 +43,25 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={logo}
+          {/* <img
+            src="../assets/logo.png"
             alt="logo"
             className="aspect-w-1 aspect-h-1 object-cover object-center w-full h-full rounded-md"
-          />
+          /> */}
+          <div className="lg:ml-10">
+            <h1 className="font-serif font-bold w-12 h-12 text-center text-[30px] border-2 border-purple-700 rounded-full text-purple-700">
+              M
+            </h1>
+          </div>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-10 lg:mr-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-white" : "text-zinc-500"
+              } hover:text-white text-[18px] font-bold cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -77,7 +82,7 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            <ul className="list-none  flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}

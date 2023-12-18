@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 
 @tailwind base;
 @tailwind components;
@@ -34,11 +34,11 @@
 }
 
 .violet-gradient {
-  background: #00cea8;
-  background: linear-gradient(-90deg, #00cea8 0%, rgba(60, 51, 80, 0) 100%);
+  background: #f12711;
+  background: linear-gradient(-90deg, #f12711 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #00cea8 0%,
+    #f12711 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }
@@ -201,4 +201,41 @@
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
+}
+
+.button-cont {
+  width: "100%";
+  height: "100%";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.94);
+
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.button-cont:hover {
+  opacity: 1;
+}
+
+.button-cont > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+.button-cont:hover {
+  transform: translateY(0px);
+  border-radius: 18px;
+}
+
+.see-more-modal {
+  background: rgb(69, 30, 3);
+  color: white;
+  margin: 40px 20px;
+}
+.see-more-header {
+  color: rgb(243, 237, 243);
+  margin-left: 40%;
+  font-weight: bold;
 }
