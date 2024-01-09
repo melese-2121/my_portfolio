@@ -17,6 +17,7 @@ import {
   react_bootstrap,
   MYSQL,
   appwrite,
+  vss,
 } from "../assets";
 
 export const navLinks = [
@@ -135,6 +136,26 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Visual Story Share (VSS)",
+    description: "Web based social media app",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "appwrite",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: vss,
+    source_code_link: "https://github.com/melese-2121/visual_story_share",
+  },
   {
     name: "Job Recruitement System",
     description:

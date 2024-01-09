@@ -30,14 +30,14 @@ const ProjectCard = ({
   return (
     <motion.div
       id="Work"
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="mx-auto"
+      variants={fadeIn("up", "spring", index * 0.7, 0.75)}
+      className="mx-auto  h-[400px]"
     >
       <Tilt
         options={defaultOptions}
-        className="bg-black-200 p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-black-200 p-5 rounded-2xl sm:w-[360px]   "
       >
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full ">
           <img
             src={image}
             alt="project_image"
@@ -63,7 +63,7 @@ const ProjectCard = ({
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-6">
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
@@ -99,7 +99,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap justify-center  gap-7 ">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

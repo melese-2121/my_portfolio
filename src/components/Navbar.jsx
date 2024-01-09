@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { menu, close } from "../assets";
+import { menu, close, logo } from "../assets";
 import { StarsCanvas } from "./canvas";
 
 const Navbar = () => {
@@ -37,22 +37,22 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2 w-20 h-20 rounded-full"
+          className="flex items-center gap-2 w-12 h-12 rounded-full"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          {/* <img
-            src="../assets/logo.png"
+          <img
+            src={logo}
             alt="logo"
-            className="aspect-w-1 aspect-h-1 object-cover object-center w-full h-full rounded-md"
-          /> */}
-          <div className="lg:ml-10">
+            className="aspect-w-1 aspect-h-1 object-cover object-center w-full h-full rounded-full"
+          />
+          {/* <div className="lg:ml-10">
             <h1 className="font-serif font-bold w-12 h-12 text-center text-[30px] border-2 border-purple-700 rounded-full text-purple-700">
               M
             </h1>
-          </div>
+          </div> */}
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10 lg:mr-10">

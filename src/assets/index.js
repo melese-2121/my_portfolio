@@ -27,10 +27,13 @@ import reminder from "./reminder.png";
 import shoeApp from "./shoeApp.png";
 import jobRecSystem from "./jobRecSystem.png";
 import my_photo from "./my_photo.jpg";
+import vss from "./vss.png";
+import logo from "./logo.png";
 
 import herobg from "./herobg.jpg";
 
 export {
+  logo,
   backend,
   creator,
   mobile,
@@ -51,6 +54,7 @@ export {
   carrent,
   reminder,
   jobRecSystem,
+  vss,
   shoeApp,
   bootstrap,
   react_bootstrap,

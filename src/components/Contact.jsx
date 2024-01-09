@@ -7,6 +7,7 @@ import { EarthCanvas, StarsCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { my_photo } from "../assets";
+import MessageButton from "./MessageButton";
 
 const Contact = () => {
   const inputRef = useRef(null);
@@ -42,6 +43,10 @@ const Contact = () => {
       ...form,
       [name]: value,
     });
+  };
+
+  const toggleContact = () => {
+    setDirectContactMethod((prev) => !prev);
   };
 
   const handleSubmit = (e) => {
@@ -91,7 +96,7 @@ const Contact = () => {
       <div
         className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden lg:h-auto w-full  `}
       >
-        {directContactMethod ? (
+        {!directContactMethod ? (
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
             className="flex-1 bg-black-200  p-8 rounded-2xl w-[75%] mx-auto  "
@@ -100,17 +105,6 @@ const Contact = () => {
               <h3 className="text-green-400 text-3xl max-sm:-ml-3  font-bold">
                 Contact Me.
               </h3>
-              <div className="flex justify-end">
-                <button
-                  className="py-1 max-sm:py-0  max-sm:px- max-sm:-mr-3 sm:px-4 text-zinc-300 max-sm:text-sm text-sm rounded-xl items-end  border-zinc-600  hover:bg-zinc-600 bg-opacity-40 outline-none font-bold shadow-md shadow-primary"
-                  style={{ border: "1px gray solid" }}
-                  onClick={() => {
-                    setDirectContactMethod((prev) => !prev);
-                  }}
-                >
-                  {directContactMethod ? "Other Methods" : "Direct Message"}
-                </button>
-              </div>
             </div>
             <p className="text-zinc-500 mt-1 mx-1 hover:text-white ">
               Feel free, I will read your message.
@@ -165,6 +159,11 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            <MessageButton
+              toggleContact={toggleContact}
+              directContactMethod={directContactMethod}
+            />
+
             <StarsCanvas />
           </motion.div>
         ) : (
@@ -176,19 +175,8 @@ const Contact = () => {
               <h3 className="flex-1 max-sm:-ml-3 text-green-400 text-3xl  font-bold">
                 Contact Me.
               </h3>
-              <div className="flex justify-end">
-                <button
-                  className="py-1 px-4 max-sm:-mr-3 max-sm:px-1 max-sm:py-0 text-sm rounded-xl items-end text-zinc-300  border-teal-800  hover:bg-teal-600 bg-opacity-40 outline-none  font-bold shadow-md shadow-primary"
-                  style={{ border: "1px teal solid" }}
-                  onClick={() => {
-                    setDirectContactMethod((prev) => !prev);
-                  }}
-                >
-                  {directContactMethod ? "Other Methods" : "Direct Message"}
-                </button>
-              </div>
             </div>
-            <div className="w-full flex justify-center items-center max-md:mt-8 md:mt-16">
+            <div className="w-full flex justify-center items-center max-md:mt-3 md:mt-6">
               <div className="max-md:h-[90px] max-md:w-[90px] md:h-[120px] md:w-[120px]">
                 <img
                   src={my_photo}
@@ -213,6 +201,10 @@ const Contact = () => {
                 <span className="text-teal-600  font-mono">just_me1111</span>
               </p>
             </div>
+            <MessageButton
+              toggleContact={toggleContact}
+              directContactMethod={directContactMethod}
+            />
 
             <StarsCanvas />
           </motion.div>
